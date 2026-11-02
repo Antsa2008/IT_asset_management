@@ -85,13 +85,13 @@ function setupNavigation() {
         const linkRect = link.getBoundingClientRect();
 
         navContainer.style.setProperty(
-            "--slider-left",
-            `${linkRect.left - navRect.left}px`
+            "--slider-top",
+            `${linkRect.top - navRect.top}px`
         );
 
         navContainer.style.setProperty(
-            "--slider-width",
-            `${linkRect.width}px`
+            "--slider-height",
+            `${linkRect.height}px`
         );
     }
 

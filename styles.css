@@ -29,52 +29,93 @@ body {
 /* Navigaatio */
 .nav-links {
     display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
     list-style: none;
-    gap: 0;
+    padding: 0;
+    margin: 0;
     position: relative;
-    align-items: center;
 }
 
 /* Liukuva sininen slider-tausta */
 .nav-links::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: var(--slider-left, 0px);
-    width: var(--slider-width, 0px);
-    height: 100%;
-    background-color: #38bdf8;
-    border-radius: 8px;
+
+    top: var(--slider-top, 0px);
+    left: 0;
+
+    width: 100%;
+    height: var(--slider-height, 0px);
+
+    background: linear-gradient(100deg, #2563eb, #3b82f6)
+    border-radius: 11px;
+
     transition:
-        left 0.3s ease,
-        width 0.3s ease;
+        top .3s ease,
+        height .3s ease;
+
+    box-shadow: 0 5px 15px rgba(37, 99, 235, .25);
+
+    z-index: 0;
     pointer-events: none;
 }
 
 .nav-links li {
-    position: relative;
-    z-index: 1;
+    width: 100%;
 }
 
 /* Navigaatiolinkit */
 .nav-links a {
-    display: block;
-    padding: 0.65rem 1rem;
-    color: #cbd5e1;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 8px;
-    transition: color 0.3s ease;
-}
-
-/* Aktiivinen linkki */
-.nav-links a.active {
-    color: #0f172a;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    padding: 14px 15px;
+    border-radius: 11px;
+    color: #aebbd0;
+    font-size: .94rem;
+    font-weight: 600;
+    transition: color .2s, background .2s;
 }
 
 /* Hiiren hover-efekti */
 .nav-links a:hover:not(.active) {
     color: white;
+    background: rgba(255, 255, 255, .07);
+}
+
+/* Aktiivinen linkki */
+.nav-links a.active {
+    color: white;
+
+/* Navigaation kuvakkeet */
+
+.nav-links a::before {
+    font-size: 1.15rem;
+    width: 22px;
+    text-align: center;
+
+}
+
+#nav-dashboard::before { content: "▦"; }
+#nav-devices::before { content: "⌂"; }
+#nav-users::before { content: "♙"; }
+#nav-licenses::before { content: "▤"; }
+
+/* Sivupalkin alaosa */
+.navbar::after {
+    content: "IT ASSET MANAGEMENT";
+    margin-top: auto;
+    padding: 20px 10px 5px;
+    color: #64748b;
+    font-size: .65rem;
+    letter-spacing: 1.5px;
+
 }
 
 /* Pääsisältö */
