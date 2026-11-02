@@ -4,6 +4,10 @@ let editingDeviceId = null;
 let editingUserId = null;
 let editingLicensesId = null;
 
+const initialDevices = [];
+const initialUsers = [];
+const initialLicenses = [];
+
 // ==========================================
 // DATAN HAKU JA TALLENNUS
 // ==========================================
