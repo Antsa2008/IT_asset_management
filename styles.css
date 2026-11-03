@@ -283,6 +283,116 @@ main#app-content {
    NAPIT
    ===================================================== */
 
+#app-content .btn {
+    border-radius: 9px;
+    font-weight: 600;
+    padding: 9px 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background .2 ease;
+}
+
+#app-content .btn-primary {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    border: 0;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, .18);
+}
+
+#app-content .btn-primary:hover {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(37, 99, 235, .27);
+}
+
+#app-content .btn-outline-primary:hover,
+#app-content .btn-outline-danger:hover,
+#app-content .btn-outline-secondary:hover {
+    transform: translateY(-1px);
+}
+
+#app-content .btn-sm {
+    padding: 6px 11px;
+    font-size: .8rem;
+}
+
+/* =====================================================
+   TABLES
+   ===================================================== */
+
+   #app-content table {
+    margin-bottom: 0;
+    color: #334155;
+    font-size: .9rem;
+}
+
+#app-content table thead th {
+    padding: 17px 15px;
+    background: #f8fafc;
+    color: #64748b;
+    border-bottom: 1px solid var(--border);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+#app-content table tbody td {
+    padding: 16px 15px;
+    border-color: #edf1f6;
+    vertical-align: middle;
+}
+
+#app-content table tbody tr {
+    transition: background .2s ease;
+}
+
+#app-content table tbody tr:hover {
+    background: #f8fbff;
+}
+
+#app-content .table code {
+    padding: 5px 8px;
+    background: #eff6ff;
+    color: #2563eb !important;
+    border-radius: 6px;
+    font-size: .82rem;
+}
+
+/* =====================================================
+   STATUS BADGET
+   ===================================================== */
+
+#app-content .badge {
+    padding: 7px 11px;
+    border-radius: 7px;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .15px;
+}
+
+/* =====================================================
+   HAKU & SUODATUS
+   ===================================================== */
+
+#app-content .form-control,
+#app-content .form-select,
+#app-content textarea.form-control {
+    min-height: 43px;
+    padding: 10px 13px;
+    border: 1px solid #dbe3ed;
+    border-radius: 9px;
+    background-color: #fff;
+    color: #1e293b;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+#app-content input:focus,
+#app-content select:focus,
+#app-content textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, .12);
+    outline: none;
+}
+
 /* =====================================================
    ANIMAATIOT
    ===================================================== */
