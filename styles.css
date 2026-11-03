@@ -180,21 +180,122 @@ main#app-content {
     padding: 42px 45px !important;
 }
 
-h1 {
-    margin-bottom: 1rem;
-    color: #0f172a;
+#app-contenth1 {
+    font-size: clamp(1.7rem, 3vw, 2.15rem);
+    font-weight: 800;
+    letter-spacing: -.8px;
+    color: #172033;
+    margin-bottom: 24px;
+
 }
 
-/* Sisällön liukuva animaatio */
+#app-content h2
+#app-content h3 
+#app-content h4 
+#app-content h5 {
+    font-weight: 700;
+    letter-spacing: -.25px;
+}
+
+/* =====================================================
+   CARDS
+   ===================================================== */
+
+#app-content .card {
+    background: var(--surface);
+    border: 1px solid rgba(226, 232, 240, .85);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#app-content .card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+#app-content .card-header {
+    padding: 17px 21px;
+    background: #f8fafc !important;
+    border-bottom: 1px solid var(--border);
+}
+
+#app-content .card-body {
+    padding: 23px;
+}
+
+#app-content .card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+/* Dashboardin värikortit*/
+
+#app-content .card.bg-primary, 
+#app-content .card.bg-success, 
+#app-content .card.bg-dark {
+    position: relative;
+    border: 0;
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+#app-content .card.bg-primary {
+    background: linear-gradient(135deg, #2563eb, #38bdf8) !important;
+}
+
+#app-content .card.bg-success {
+    background: linear-gradient(135deg, #059669, #34d399) !important;
+}
+
+#app-content .card.bg-dark {
+    background: linear-gradient(135deg, #334155, #64748b) !important;
+}
+
+#app-content .card.bg-primary::after,
+#app-content .card.bg-success::after,
+#app-content .card.bg-dark::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    right: -45px;
+    top: -65px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .10);
+    box-shadow: 0 0 0 25px rgba(255, 255, 255, .045);
+    pointer-events: none;
+}
+
+#app-content .card.bg-primary:hover,
+#app-content .card.bg-success:hover,
+#app-content .card.bg-dark:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, .16);
+}
+
+#app-content .display-5 {
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+/* =====================================================
+   NAPIT
+   ===================================================== */
+
+/* =====================================================
+   ANIMAATIOT
+   ===================================================== */
+
 @keyframes slideInContent {
     from {
         opacity: 0;
-        transform: translateX(18px);
+        transform: translateY(12px);
     }
 
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
@@ -202,9 +303,11 @@ h1 {
     animation: slideInContent 0.3s ease-out;
 }
 
-/* Responsiivisuus puhelimille ja tableteille */
-@media (max-width: 768px) {
-    .navbar {
+/* =====================================================
+    RESPONSIIVISUUS
+   ===================================================== */
+@media (max-width: 900px) {
+    header {
         flex-direction: column;
         gap: 1rem;
     }
