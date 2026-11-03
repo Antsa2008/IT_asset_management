@@ -35,7 +35,7 @@ body {
 header {
     position: fixed;
     inset: 0 auto 0 0;
-    width: 1255px;
+    width: 255px;
     height: 100vh;
     z-index: 1000;
 }
@@ -570,124 +570,67 @@ main#app-content {
     }
 }
 
-/* ==========================================
-   LAITTEIDEN HAKU JA SUODATUS
-   ========================================== */
+/* =====================================================
+   SAAVUTETTAVUUS
+   ===================================================== */
 
-#device-search,
-#device-type-filter,
-#device-status-filter {
-    min-height: 44px;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    background-color: #fff;
-    color: #1e293b;
-    transition: border-color 0.2s ease,
-                box-shadow 0.2s ease;
-}
-
-/* Hakukenttä erottuu hieman muista kentistä */
-#device-search {
-    padding-left: 14px;
-    font-size: 1rem;
-}
-
-/* Selkeä fokus, kun käyttäjä napsauttaa kenttää */
-#device-search:focus,
-#device-type-filter:focus,
-#device-status-filter:focus {
-    border-color: #38bdf8;
-    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
-    outline: none;
-}
-
-/* Hakukentän paikkamerkkiteksti */
-#device-search::placeholder {
-    color: #94a3b8;
-    opacity: 1;
-}
-
-/* Hakukentän otsikot */
-#app-content .form-label {
-    color: #334155;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-/* Hakutulosten lukumäärä */
-#device-result-count {
-    font-size: 0.9rem;
-    color: #64748b;
-}
-
-/* Tyhjennyspainike */
-#btn-reset-filters {
-    border-radius: 8px;
-    transition: background-color 0.2s ease,
-                color 0.2s ease;
-}
-
-#btn-reset-filters:hover {
-    background-color: #1e293b;
-    color: white;
-}
-
-/* Taulukon solut */
-#device-table-body td {
-    vertical-align: middle;
-}
-
-/* Pienet näytöt */
-@media (max-width: 768px) {
-    #app-content .card-body {
-        padding: 1rem;
+   button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
+        outline: 3px solid rgba(56, 189, 248, .65);
+        outline-offset: 3px;
     }
 
-    #btn-reset-filters {
-        width: 100%;
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01s !important;
+        transition-duration: .01s !important;
     }
 }
 
-/* ==========================================
-   KÄYTTÄJIEN HALLINTA
-   ========================================== */
+/* Dashboardin muistutukset */
 
-#user-search {
-    min-height: 44px;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    background-color: #fff;
-    color: #1e293b;
-    transition: border-color 0.2s ease,
-                box-shadow 0.2s ease;
+#app-content .list-group-item {
+    padding: 15px 5px;
+    border-color: #edf1f6;
+    transition: padding-left .2s ease;
 }
 
-#user-search:focus {
-    border-color: #38bdf8;
-    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
-    outline: none;
+#app-content .list-group-item:hover {
+    padding-left: 12px !important;
+    background: #f8fafc;
 }
 
-#user-search::placeholder {
-    color: #94a3b8;
-    opacity: 1;
+/* Linkit */
+
+#app-content a {
+    transition: color .2 ease;
 }
 
-#user-table-body td {
-    vertical-align: middle;
+/* Tyhjät taulukot */
+
+#app-content .text-muted {
+    color: #94a3b8 !important;
 }
 
-#user-table-body a {
-    color: #0369a1;
-    text-decoration: none;
+/* Sisältöalueen otsikoiden välistykset */
+
+#app-content .mb-4 {
+    scroll-margin-top: 20px
 }
 
-#user-table-body a:hover {
-    text-decoration: underline;
-}
+/* Dashboardin tilastojen numerot */
 
-@media (max-width: 768px) {
-    #user-table-body .btn {
-        margin-bottom: 4px;
+    #app-content .display-5 {
+        font-size: 2.7rem;
     }
+
+/* Modalien avautuminen */
+
+.modal.fade .modal-dialog {
+    transition: transform .25 ease-out
 }
