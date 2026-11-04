@@ -2,7 +2,7 @@
 
 IT Asset Management
 1. Projektin tarkoitus
-IT Asset Management on selainpohjainen sovellus, jonka tarkoituksena on helpottaa yrityksen IT-omaisuuden hallintaa.
+Selainpohjainen sovellus, jonka tarkoituksena on helpottaa yrityksen IT-omaisuuden hallintaa.
 
 Sovelluksella voidaan hallita yrityksen IT-laitteita, työntekijöitä sekä ohjelmistolisenssejä yhdessä käyttöliittymässä.
 Tavoitteena on tarjota selkeä ja helppokäyttöinen kokonaisuus, jonka avulla IT-omaisuuden tietoja voidaan ylläpitää ja seurata.
@@ -29,7 +29,7 @@ Internet-yhteys Bootstrapin lataamista varten CDN-palvelusta.
 Käynnistysohje
 Lataa tai kloonaa projektin tiedostot omalle tietokoneelle.
 Varmista, että kaikki projektin tiedostot ovat samassa projektikansiossa oikeilla tiedostonimillä.
-Avaa projektin index.html-tiedosto verkkoselaimessa.
+Avaa projektin index.html-tiedosto verkkoselaimessa. (CTRL + F5 (run without debugging) tai Go Live (Live server lisäosa))
 Sovellus käynnistyy automaattisesti.
 Erillistä asennusta, palvelimen käynnistämistä tai tietokannan määrittämistä ei tarvita.
 
@@ -129,7 +129,7 @@ Sovellus tarkistaa, ettei käytössä olevien lisenssien määrä ylitä lisenss
 Projektin tiedostorakenne on seuraava:
 
 
-IT-Asset-Management/
+harjoitus_projekti/
 │
 ├── index.html
 ├── styles.css
@@ -167,7 +167,7 @@ Ei erillistä käyttöoikeuksien hallintaa: Kaikki sovellusta käyttävät voiva
 8. Mahdolliset jatkokehitysideat
 Sovellusta voidaan kehittää edelleen esimerkiksi seuraavilla ominaisuuksilla:
 
-Tietokannan käyttöönotto: LocalStorage-tallennuksen korvaaminen palvelinpuolen tietokannalla, esimerkiksi MySQL:llä tai PostgreSQL:llä.
+Tietokannan käyttöönotto: LocalStorage-tallennuksen korvaaminen palvelinpuolen tietokannalla.
 Kirjautumisjärjestelmä: Käyttäjätunnusten ja salasanojen lisääminen sekä käyttöoikeuksien hallinta.
 Varmuuskopiointi: Tietojen automaattinen varmuuskopiointi ja palautusmahdollisuus.
 Excel- ja CSV-vienti: Laitteiden, käyttäjien ja lisenssien tietojen vieminen tiedostoihin.
