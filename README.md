@@ -1,4 +1,4 @@
-# harjoitus_projekti
+# IT_asset_management
 
 IT Asset Management
 1. Projektin tarkoitus
